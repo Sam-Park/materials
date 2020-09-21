@@ -10,7 +10,11 @@ import unittest
 
 def add_it_up(n):
     # TODO: Your code goes here!
-    return n
+    try:
+        result = sum(range(n + 1))
+    except TypeError:
+        result = 0
+    return result
 
 
 class IntegerSumTestCase(unittest.TestCase):
